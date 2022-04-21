@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="850.0" style="-fx-background-color: #F1F7ED;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.product.IndexController">
+   <children>
+      <Pane layoutX="155.0" layoutY="14.0" prefHeight="573.0" prefWidth="682.0" style="-fx-border-color: #B3001B; -fx-border-width: 3px; -fx-border-radius: 6px; -fx-background-color: #F1F7ED;">
+         <children>
+            <TableView fx:id="products" layoutX="14.0" layoutY="126.0" onMouseClicked="#SelectItem" prefHeight="377.0" prefWidth="660.0" stylesheets="@../../style.css">
+              <columns>
+                <TableColumn fx:id="name" prefWidth="105.0" text="Name" />
+                <TableColumn fx:id="description" prefWidth="240.0" text="Description" />
+                  <TableColumn fx:id="price" prefWidth="125.0" text="Price" />
+                  <TableColumn fx:id="categorie" prefWidth="232.0" text="Categorie" />
+              </columns>
+            </TableView>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="16.0" prefHeight="49.0" prefWidth="660.0" text="Liste des produits" textFill="#393d3f">
+               <font>
+                  <Font name="Times New Roman Bold" size="28.0" />
+               </font>
+            </Label>
+            <Button layoutX="136.0" layoutY="523.0" mnemonicParsing="false" onAction="#redirectTonewProduct" prefHeight="31.0" prefWidth="249.0" style="-fx-background-color: #b3001b;" text="+ Ajouter une nouveau produits" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="401.0" layoutY="523.0" mnemonicParsing="false" onAction="#Delete" prefHeight="31.0" prefWidth="111.0" style="-fx-background-color: #b3001b;" text="Supprimer" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Button>
+            <Button layoutX="528.0" layoutY="523.0" mnemonicParsing="false" onAction="#Edit" prefHeight="31.0" prefWidth="127.0" style="-fx-background-color: #b3001b;" text="Modifier" textFill="WHITE">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="tfrecherche" layoutX="141.0" layoutY="73.0" onKeyReleased="#Search" prefHeight="31.0" prefWidth="531.0" promptText="Rechercher un produit">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="573.0" prefWidth="129.0" style="-fx-border-color: #B3001B; -fx-border-width: 3px; -fx-border-radius: 6px; -fx-background-color: #F1F7ED;">
+         <children>
+            <Button fx:id="EventsBack" mnemonicParsing="false" onAction="#ShowEvents" prefHeight="30.0" prefWidth="176.0" style="-fx-border-color: #B3001B; -fx-border-radius: 10px; -fx-background-radius: 10px;" text="Events" textFill="#b3001b">
+               <VBox.margin>
+                  <Insets bottom="3.0" top="3.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="CategoryEventsBack" mnemonicParsing="false" onAction="#ShowCategoryEvent" prefHeight="30.0" prefWidth="176.0" style="-fx-background-radius: 10px; -fx-border-color: #B3001B; -fx-border-radius: 10px;" text="Event Categories" textFill="#b3001b">
+               <VBox.margin>
+                  <Insets bottom="3.0" top="3.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="Products" mnemonicParsing="false" onAction="#showProducts" prefHeight="30.0" prefWidth="176.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-background-color: #B3001B;" text="Products" textFill="#393d3f">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" top="3.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="ProductCategories" mnemonicParsing="false" onAction="#showProductCategories" prefHeight="30.0" prefWidth="176.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: #B3001B;" text="Product Categories" textFill="#b3001b">
+               <font>
+                  <Font name="Times New Roman" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="3.0" top="3.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="5.0" right="5.0" top="10.0" />
+         </padding>
+      </VBox>
+      <ImageView fitHeight="45.0" fitWidth="93.0" layoutX="43.0" layoutY="536.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
