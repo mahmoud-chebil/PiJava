@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="850.0" style="-fx-background-color: #F1F7ED;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.event.ShowEventsController">
+   <children>
+      <TableView fx:id="tvEvents" layoutX="27.0" layoutY="154.0" onMouseClicked="#showSelectedEvent" prefHeight="421.0" prefWidth="378.0" stylesheets="@../../style.css">
+        <columns>
+          <TableColumn fx:id="eventsColNom" prefWidth="75.0" text="Nom" />
+            <TableColumn fx:id="eventsColLieu" prefWidth="75.0" text="Lieu" />
+            <TableColumn fx:id="eventsColDateDebut" prefWidth="75.0" text="Date Début" />
+            <TableColumn fx:id="eventsColDateFin" prefWidth="75.0" text="Date Fin" />
+            <TableColumn fx:id="eventsColPrix" prefWidth="75.0" text="Prix" />
+        </columns>
+      </TableView>
+      <Label fx:id="eventShowTitle" layoutX="353.0" layoutY="63.0" text="Evènements">
+         <font>
+            <Font name="Times New Roman Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="eventShowNom" alignment="CENTER" layoutX="477.0" layoutY="124.0" prefHeight="20.0" prefWidth="271.0" text="Nom">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="eventShowDatePub" alignment="CENTER" layoutX="468.0" layoutY="153.0" prefHeight="17.0" prefWidth="305.0" text="DatePub" textAlignment="CENTER" textFill="#909090">
+         <font>
+            <Font name="Times New Roman Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="eventShowDateDeb" alignment="CENTER" layoutX="481.0" layoutY="182.0" prefHeight="15.0" prefWidth="93.0" text="Date deb" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="eventShowDateFin" alignment="CENTER" layoutX="647.0" layoutY="182.0" prefHeight="15.0" prefWidth="81.0" text="Date fin">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="eventShowImg" fitHeight="156.0" fitWidth="293.0" layoutX="469.0" layoutY="209.0" pickOnBounds="true" />
+      <Label fx:id="eventShowDesc" alignment="TOP_CENTER" layoutX="451.0" layoutY="365.0" prefHeight="176.0" prefWidth="328.0" text="Description" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnEventAdd" layoutX="27.0" layoutY="115.0" mnemonicParsing="false" onAction="#GoToAddEvent" prefHeight="20.0" prefWidth="109.0" style="-fx-background-color: #B3001B;" text="Ajouter">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/add.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="eventSearch" layoutX="232.0" layoutY="118.0" promptText="Rechercher...">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnEventDelete" layoutX="666.0" layoutY="551.0" mnemonicParsing="false" onAction="#deleteEvent" prefHeight="8.0" prefWidth="107.0" style="-fx-background-color: #B3001B;" text="Supprimer">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEventEdit" layoutX="481.0" layoutY="551.0" mnemonicParsing="false" onAction="#GoToEditEvent" prefHeight="26.0" prefWidth="107.0" style="-fx-background-color: #B3001B;" text="Modifier">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/edit.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="eventShowCategory" alignment="CENTER" layoutX="728.0" layoutY="126.0" prefHeight="20.0" prefWidth="67.0" style="-fx-background-color: #2b2a2a; -fx-background-radius: 5;" text="Category" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Times New Roman" size="12.0" />
+         </font></Label>
+      <HBox prefHeight="45.0" prefWidth="850.0" style="-fx-background-color: #393d3f;">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/logo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="3.0" left="8.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#ShowEvents" prefHeight="35.0" prefWidth="94.0" style="-fx-background-color: #B3001B; -fx-background-radius: 15px;" text="Evènements">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="3.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#ShowShop" prefHeight="44.0" prefWidth="87.0" style="-fx-background-color: #B3001B; -fx-background-radius: 15px;" text="Shop">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
