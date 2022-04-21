@@ -20,7 +20,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.util.Callback;
-import services.PanierService;
+
 import tests.MainGUI;
 
 /**

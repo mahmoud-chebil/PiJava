@@ -25,7 +25,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.util.Callback;
 import models.Product;
-import services.PanierService;
+
 import tests.MainGUI;
 
 public class MarketController implements Initializable {
@@ -127,12 +127,8 @@ public class MarketController implements Initializable {
                         final Button test = new Button("Ajouter le produit");
                         test.setOnAction(event -> {
                             Product p = getTableView().getItems().get(getIndex());
-                            PanierService panierService = new PanierService();
-                            try {
-                                panierService.addProduct( p.getId());
-                            } catch (SQLException ex) {
-                                
-                            }
+                          //  PanierService panierService = new PanierService();
+                            
                             System.out.println(p);
                         });
 
