@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.event.AddEventController">
+   <children>
+      <VBox layoutX="164.0" layoutY="165.0" prefHeight="293.0" prefWidth="229.0">
+         <children>
+            <TextField fx:id="tfEventAddNom">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </TextField>
+            <TextArea fx:id="tfEventAddDesc" minHeight="-Infinity" prefHeight="151.0" prefWidth="229.0">
+               <VBox.margin>
+                  <Insets bottom="8.0" top="8.0" />
+               </VBox.margin>
+            </TextArea>
+            <TextField fx:id="tfEventAddLieu">
+               <VBox.margin>
+                  <Insets bottom="8.0" top="8.0" />
+               </VBox.margin>
+            </TextField>
+            <DatePicker fx:id="dpEventAddDateDeb" prefHeight="25.0" prefWidth="240.0">
+               <VBox.margin>
+                  <Insets bottom="8.0" top="8.0" />
+               </VBox.margin>
+            </DatePicker>
+            <DatePicker fx:id="dpEventAddDateFin" prefHeight="25.0" prefWidth="249.0">
+               <VBox.margin>
+                  <Insets bottom="8.0" top="8.0" />
+               </VBox.margin>
+            </DatePicker>
+            <TextField fx:id="tfEventAddNbP">
+               <VBox.margin>
+                  <Insets bottom="8.0" top="8.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+      <VBox layoutX="42.0" layoutY="167.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label text="Nom :">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" top="6.0" />
+               </padding>
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Description :">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" top="6.0" />
+               </padding>
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="27.0" prefWidth="40.0" text="Lieu :">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="132.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="8.0" top="8.0" />
+               </padding>
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Date Début :">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="7.0" top="7.0" />
+               </padding>
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Date Fin :">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="7.0" top="7.0" />
+               </padding>
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Nbr participants :">
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="7.0" top="7.0" />
+               </padding>
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Label layoutX="292.0" layoutY="102.0" text="Ajouter un évènement" textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman Bold" size="28.0" />
+         </font>
+      </Label>
+      <Button fx:id="EventAddButton" layoutX="331.0" layoutY="552.0" mnemonicParsing="false" onAction="#AjouterEvent" style="-fx-background-color: #B3001B;" text="Ajouter">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/add.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ImageView fx:id="eventAddImg" fitHeight="172.0" fitWidth="282.0" layoutX="510.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="eventAddChoose" layoutX="580.0" layoutY="213.0" mnemonicParsing="false" onAction="#UploadImageActionPerformed" text="Choisir Une Image" />
+      <ComboBox fx:id="cbEventAdd" layoutX="580.0" layoutY="458.0" prefWidth="150.0" />
+      <TextField fx:id="tfEventAddPrix" layoutX="580.0" layoutY="176.0" prefHeight="25.0" prefWidth="229.0" />
+      <Label layoutX="479.0" layoutY="457.0" text="Categorie :">
+         <padding>
+            <Insets bottom="5.0" top="6.0" />
+         </padding>
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="476.0" layoutY="176.0" text="Prix :">
+         <padding>
+            <Insets bottom="5.0" top="6.0" />
+         </padding>
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="476.0" layoutY="213.0" text="Image :">
+         <padding>
+            <Insets bottom="5.0" top="6.0" />
+         </padding>
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="EventAddCancel" layoutX="466.0" layoutY="552.0" mnemonicParsing="false" onAction="#cancelAdd" style="-fx-background-color: #B3001B;" text="Annuler">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/delete.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <HBox prefHeight="45.0" prefWidth="850.0" style="-fx-background-color: #393d3f;">
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/logo.png" />
+               </image>
+               <HBox.margin>
+                  <Insets bottom="3.0" left="8.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#ShowEvents" prefHeight="44.0" prefWidth="87.0" style="-fx-background-color: #B3001B; -fx-background-radius: 15px;" text="Evènements">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="3.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#ShowShop" prefHeight="44.0" prefWidth="87.0" style="-fx-background-color: #B3001B; -fx-background-radius: 15px;" text="Shop">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

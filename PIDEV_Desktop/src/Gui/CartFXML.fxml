@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="869.0" style="-fx-background-color: #F1F7ED;" stylesheets="@../Style/stylemain.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CartFXMLController">
+   <children>
+      <ComboBox fx:id="com1" layoutX="227.0" layoutY="121.0" prefWidth="150.0" promptText="Produit" />
+      <ComboBox fx:id="com2" layoutX="227.0" layoutY="273.0" prefWidth="150.0" promptText="Quantité" />
+      <TableView fx:id="table_cart" layoutX="399.0" layoutY="84.0" onMouseClicked="#getSelected" prefHeight="388.0" prefWidth="421.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="75.0" text="ID Cart" visible="false" />
+            <TableColumn fx:id="col_q" prefWidth="246.0" text="name" />
+          <TableColumn fx:id="col_nom" prefWidth="248.0" text="id" />
+        </columns>
+      </TableView>
+ 
+      <TextField fx:id="ftid" disable="true" layoutX="146.0" layoutY="56.0" prefHeight="31.0" prefWidth="150.0" visible="false" />
+      <Button fx:id="back" layoutX="399.0" layoutY="520.0" mnemonicParsing="false" onAction="#backk" prefHeight="31.0" prefWidth="92.0" text="Retour" />
+      <Button fx:id="validerc" layoutX="617.0" layoutY="520.0" mnemonicParsing="false" onAction="#Passer" prefHeight="39.0" prefWidth="214.0" style="-fx-background-color: #33c601;" text="Valider Commande" textFill="WHITE" />
+      <VBox alignment="TOP_CENTER" layoutY="-7.0" prefHeight="688.0" prefWidth="218.0" style="-fx-background-color: #F1F7ED;" styleClass="mainFxmlClass" stylesheets="@../Style/stylemain.css">
+         <children>
+            <ImageView fitHeight="131.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/278667095_522563369335371_2629441377533780861_n.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <Button cancelButton="true" defaultButton="true" mnemonicParsing="false" prefHeight="47.0" prefWidth="191.0" styleClass="line" text="Evenement">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <VBox.margin>
+                  <Insets bottom="30.0" top="60.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="47.0" prefWidth="192.0" styleClass="line" text="Commande">
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="47.0" prefWidth="194.0" styleClass="line" text="Reclamation">
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" graphicTextGap="7.0" layoutX="227.0" layoutY="14.0" lineSpacing="1.0" prefHeight="47.0" prefWidth="617.0" styleClass="mainFxmlClass" stylesheets="@../Style/stylemain.css" text="Votre Panier" textFill="#393d3f">
+         <font>
+            <Font name="Times New Roman Bold" size="28.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_RIGHT" layoutX="656.0" layoutY="9.0" prefHeight="47.0" prefWidth="152.0">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/278382927_1140717773171535_2077922958034264854_n.png" />
+               </image>
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label style="-fx-font-size: 16; -fx-font: bold;" text="TuniDiscovery">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
