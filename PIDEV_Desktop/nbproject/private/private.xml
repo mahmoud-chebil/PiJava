@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/services/ServiceEvent.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>118</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/mahmo/Downloads/PIDEV_Geeks3A32_sprint_java-molka/src/controllers/product/MarketController.java</file>
+            <file>file:/C:/Users/mahmo/Downloads/PIDEV_Geeks3A32_sprint_java-molka/src/tests/MainGUI.java</file>
+            <file>file:/C:/Users/mahmo/Downloads/PIDEV_Geeks3A32_sprint_java-molka/src/utils/DataSource.java</file>
+            <file>file:/C:/Users/mahmo/Downloads/PIDEV_Geeks3A32_sprint_java-molka/src/controllers/product/ItemController.java</file>
+            <file>file:/C:/Users/mahmo/Downloads/PIDEV_Geeks3A32_sprint_java-molka/src/controllers/productCategory/IndexController.java</file>
+            <file>file:/C:/Users/mahmo/Downloads/PIDEV_Geeks3A32_sprint_java-molka/src/controllers/product/IndexController.java</file>
+            <file>file:/C:/Users/mahmo/Downloads/PIDEV_Geeks3A32_sprint_java-molka/src/models/CategoryProduct.java</file>
+            <file>file:/C:/Users/mahmo/Downloads/PIDEV_Geeks3A32_sprint_java-molka/src/models/Product.java</file>
+            <file>file:/C:/Users/mahmo/Downloads/PIDEV_Geeks3A32_sprint_java-molka/src/services/ServiceCategoryProductImpl.java</file>
+            <file>file:/C:/Users/mahmo/Downloads/PIDEV_Geeks3A32_sprint_java-molka/src/views/product/index.fxml</file>
+            <file>file:/C:/Users/mahmo/Downloads/PIDEV_Geeks3A32_sprint_java-molka/src/uploads/pro-db94fc80-bd80-41a0-a656-017c63df0e7a.png</file>
+            <file>file:/C:/Users/mahmo/Downloads/PIDEV_Geeks3A32_sprint_java-molka/src/services/ServiceProductImpl.java</file>
+            <file>file:/C:/Users/mahmo/Downloads/PIDEV_Geeks3A32_sprint_java-molka/src/controllers/product/formController.java</file>
+            <file>file:/C:/Users/mahmo/Downloads/PIDEV_Geeks3A32_sprint_java-molka/src/services/IService.java</file>
+            <file>file:/C:/Users/mahmo/Downloads/PIDEV_Geeks3A32_sprint_java-molka/src/models/Personne.java</file>
+        </group>
+    </open-files>
+</project-private>
