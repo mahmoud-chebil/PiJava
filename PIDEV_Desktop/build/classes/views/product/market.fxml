@@ -5,15 +5,17 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="850.0" style="-fx-background-color: #F1F7ED;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.product.MarketController">
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="850.0" stylesheets="@../../Style/stylemain.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.product.MarketController">
    <children>
-      <ScrollPane fx:id="scroll" layoutX="53.0" layoutY="123.0" prefHeight="465.0" prefWidth="796.0" style="-fx-background-color: none;">
+      <ScrollPane fx:id="scroll" layoutX="53.0" layoutY="123.0" prefHeight="465.0" prefWidth="796.0">
          <content>
             <GridPane fx:id="grid" alignment="TOP_CENTER" prefHeight="0.0" prefWidth="0.0">
                <rowConstraints>
@@ -28,22 +30,42 @@
          </font>
       </Label>
       <TextField fx:id="tfSearch" layoutX="246.0" layoutY="79.0" onKeyReleased="#Search" prefHeight="25.0" prefWidth="386.0" promptText="chercher un produit" />
-      <HBox prefHeight="45.0" prefWidth="850.0" style="-fx-background-color: #393d3f;">
+      <HBox layoutX="-7.0" prefHeight="59.0" prefWidth="857.0" style="-fx-background-color: #393d3f;">
          <children>
-            <Button mnemonicParsing="false" onAction="#ShowShop" prefHeight="44.0" prefWidth="87.0" style="-fx-background-color: #B3001B; -fx-background-radius: 15px;" text="Shop">
+            <AnchorPane prefHeight="45.0" prefWidth="60.0" />
+            <Button fx:id="panier" mnemonicParsing="false" onAction="#ShowShop" prefHeight="48.0" prefWidth="158.0" style="-fx-background-radius: 15px;" styleClass="pressed" text="Mon Panier">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
-               <HBox.margin>
-                  <Insets bottom="5.0" left="3.0" right="3.0" top="5.0" />
-               </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#ShowCommande" prefHeight="44.0" prefWidth="87.0" style="-fx-background-color: #B3001B; -fx-background-radius: 15px;" text="Commandes">
+            <AnchorPane prefHeight="53.0" prefWidth="27.0" />
+            <Button fx:id="Commandes" mnemonicParsing="false" onAction="#ShowCommande" prefHeight="47.0" prefWidth="179.0" style="-fx-background-radius: 15px;" styleClass="pressed" stylesheets="@../../Style/stylemain.css" text="Mes Commandes">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
             </Button>
          </children>
       </HBox>
+      <AnchorPane layoutX="657.0" prefHeight="200.0" prefWidth="192.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" layoutX="26.0" layoutY="64.0" prefHeight="47.0" prefWidth="152.0">
+               <children>
+                  <ImageView fitHeight="37.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/278382927_1140717773171535_2077922958034264854_n.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label style="-fx-font-size: 16; -fx-font: bold;" text="TuniDiscovery">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

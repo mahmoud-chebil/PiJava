@@ -23,7 +23,7 @@ public class MainGUI extends Application {
         try {
        // Parent  root = FXMLLoader.load(getClass().getResource("../views/productCategory/index.fxml"));
         Parent  root = FXMLLoader.load(getClass().getResource("../views/product/market.fxml"));
-        
+    //  Parent  root = FXMLLoader.load(getClass().getResource("../test.fxml"));
         Scene scene = new Scene(root);
         
         primaryStage.setTitle("PIDEV");
@@ -41,6 +41,7 @@ public class MainGUI extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+        
     }
     
 }

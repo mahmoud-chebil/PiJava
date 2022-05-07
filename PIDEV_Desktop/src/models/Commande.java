@@ -26,11 +26,12 @@ public class Commande {
     private String prixpro;
     private int etat;
     private String email;
-    private String detailspro;
+    public String produits;
   //  private Product pc;
        private  ArrayList<Commande> c;
    //      private  ArrayList<Product> p;
 
+       private ArrayList<Product> p;
     public Commande() {
          c = new ArrayList<Commande>();
     }
@@ -39,12 +40,39 @@ public class Commande {
         this.c = c;
     }
 
+    public Commande(int etat) {
+        this.etat = etat;
+    }
+
     
     public Commande(double total, String adressecomplet) {
         this.total = total;
         this.adressecomplet = adressecomplet;
     }
-
+    public Commande(int id ,String nom, String prenom, String adressecomplet, String telephone,Float total, String email,String produits) {
+         this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.adressecomplet = adressecomplet;
+        this.telephone = telephone;
+        this.total=total;
+        this.email = email;
+       
+        this.produits = produits;
+    }
+    
+     public Commande(int id ,String nom, String prenom, String adressecomplet, String telephone, String email,int etat) {
+         this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.adressecomplet = adressecomplet;
+        this.telephone = telephone;
+       
+        this.email = email;
+       this.etat=etat;
+        
+    }
+    
     public Commande(int id, String nom, String prenom, String adressecomplet, String telephone, String email) {
         this.id = id;
         this.nom = nom;
@@ -53,6 +81,28 @@ public class Commande {
         this.telephone = telephone;
         this.email = email;
     }
+
+    public Commande(int id, String nom, String prenom, String adressecomplet, String telephone, int etat, String email,String produits) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.adressecomplet = adressecomplet;
+        this.telephone = telephone;
+        this.etat = etat;
+        this.email = email;
+        this.produits=produits;
+    }
+
+    public Commande(int id, String nom, String prenom, String adressecomplet, int etat, String email) {
+        this.id = id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.adressecomplet = adressecomplet;
+        this.etat = etat;
+        this.email = email;
+    }
+    
+    
 
      public Commande( String nom, String prenom, String adressecomplet, String telephone, String email) {
 
@@ -145,7 +195,7 @@ public class Commande {
     }
 
     public String getDetailspro() {
-        return detailspro;
+        return produits;
     }
 
     public void setId(int id) {
@@ -176,6 +226,8 @@ public class Commande {
         this.total = total;
     }
 
+
+
    
    
    
@@ -192,8 +244,8 @@ public class Commande {
         this.email = email;
     }
 
-    public void setDetailspro(String detailspro) {
-        this.detailspro = detailspro;
+    public void setDetailspro(String produits) {
+        this.produits = produits;
     }
 
     
@@ -208,7 +260,7 @@ public class Commande {
 
     @Override
     public String toString() {
-        return "Commande{" + "id=" + id + ", idpro=" + idpro + ", id_user_id=" + id_user_id + ", nom=" + nom + ", prenom=" + prenom + ", adressecomplet=" + adressecomplet + ", total=" + total + ", telephone=" + telephone + ", prixpro=" + prixpro + ", etat=" + etat + ", email=" + email + ", detailspro=" + detailspro + ", c=" + c + '}';
+        return "Commande{" + "id=" + id +  ", nom=" + nom + ", prenom=" + prenom + ", adressecomplet=" + adressecomplet + ", total=" + total + ", telephone=" + telephone  + ", email=" + email + ", detailspro=" + produits + '}';
     }
 
    

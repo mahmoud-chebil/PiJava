@@ -7,6 +7,7 @@ package services;
 
 import java.sql.SQLException;
 import java.util.List;
+import models.Cart;
 
 /**
  *
@@ -18,5 +19,5 @@ public interface IServiceCart<T> {
     List<T> afficher() throws SQLException;
      void Delete(int id) throws SQLException ;
      void modifier(T t, int id) throws SQLException ;
-    
+     public void ajouterpr(T t);
 }

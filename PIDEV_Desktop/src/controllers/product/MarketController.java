@@ -14,18 +14,25 @@ import javafx.scene.layout.Region;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
+import javafx.stage.Stage;
 import javafx.util.Callback;
+import models.Cart;
 import models.Product;
-import services.PanierService;
+import services.ServiceCartt;
+
 import tests.MainGUI;
 
 public class MarketController implements Initializable {
@@ -72,6 +79,7 @@ public class MarketController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
     }
 
     @FXML
@@ -127,12 +135,8 @@ public class MarketController implements Initializable {
                         final Button test = new Button("Ajouter le produit");
                         test.setOnAction(event -> {
                             Product p = getTableView().getItems().get(getIndex());
-                            PanierService panierService = new PanierService();
-                            try {
-                                panierService.addProduct( p.getId());
-                            } catch (SQLException ex) {
-                                
-                            }
+                          //  PanierService panierService = new PanierService();
+                            
                             System.out.println(p);
                         });
 
@@ -151,6 +155,52 @@ public class MarketController implements Initializable {
         
         
     }
+    
+       @FXML
+    private TableView<Product> tvgames;
+       @FXML
+    private void ajouteaupanier(ActionEvent event) {
+   
+ ServiceCartt gs = new ServiceCartt();
+ 
+            Cart cart = new Cart(tvgames.getSelectionModel().getSelectedItem().getId(),tvgames.getSelectionModel().getSelectedItem().getName());
+            
+
+        gs.ajouter(cart);
+         
+
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("success");
+        
+         alert.setContentText("product ajoutée");
+         alert.show();
+    
+    }
+
+  private Stage stage;
+ private Scene scene;
+ private Parent root;
+    Statement stm;
+    @FXML
+    private void carte(ActionEvent event)throws IOException  {
+                 Parent root = FXMLLoader.load(getClass().getResource("../../Gui/carttFXML.fxml"));
+  stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+  scene = new Scene(root);
+  stage.setScene(scene);
+  stage.show();
+ 
+    }
+    
+ private void commandev(ActionEvent event)throws IOException  {
+                 Parent root = FXMLLoader.load(getClass().getResource("/views/commande/form.fxml"));
+  stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+  scene = new Scene(root);
+  stage.setScene(scene);
+  stage.show();
+ 
+    }
+    
+
 
     @FXML
     private void ShowCommande(ActionEvent event) throws IOException {
@@ -162,7 +212,7 @@ public class MarketController implements Initializable {
 
     @FXML
     private void ShowShop(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../../views/commande/panier.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../../Gui/carttFXML.fxml"));
         Scene scene = new Scene(root);
         MainGUI.pStage.setScene(scene);
         MainGUI.pStage.show();

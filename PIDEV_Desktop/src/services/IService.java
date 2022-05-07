@@ -6,6 +6,7 @@
 package services;
 
 import java.util.List;
+import models.Cart;
 
 /**
  *
@@ -19,4 +20,5 @@ public interface IService<T> {
     public void modifier(T t);
      public void modifierf(T t,int id);
     public List<T> afficher();
+    public void modifierr(T t,int id);
 }

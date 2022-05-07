@@ -131,9 +131,7 @@
                </image>
             </ImageView>
             <Button cancelButton="true" defaultButton="true" mnemonicParsing="false" prefHeight="47.0" prefWidth="191.0" styleClass="line" stylesheets="@../../Style/stylemain.css" text="Evenement">
-               <cursor>
-                  <Cursor fx:constant="DEFAULT" />
-               </cursor>
+              
                <VBox.margin>
                   <Insets bottom="30.0" top="60.0" />
                </VBox.margin>

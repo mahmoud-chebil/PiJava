@@ -25,7 +25,7 @@ public class ItemController implements Initializable {
     private Label prenomLable;
     @FXML
     private Label adresseLable;
-        @FXML
+    @FXML
     private Label telephoneLable;
             @FXML
     private Label emailLable;

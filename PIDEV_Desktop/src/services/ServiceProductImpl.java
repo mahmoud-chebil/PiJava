@@ -108,7 +108,7 @@ public class ServiceProductImpl implements IService<Product> {
             PreparedStatement pst = cnx.prepareStatement(requete);
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
-                list.add(new Product(rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6), this.getCategoryName(rs.getInt(2)),this.getFileName(rs.getInt(1))));
+                list.add(new Product(rs.getInt(1), rs.getString(3), rs.getString(5), rs.getString(4)));
             }
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
@@ -188,6 +188,11 @@ public class ServiceProductImpl implements IService<Product> {
 
     @Override
     public void supprimer(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void modifierr(Product t, int id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

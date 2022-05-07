@@ -106,4 +106,9 @@ public class ServiceCategoryProductImpl implements IService<CategoryProduct>{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    @Override
+    public void modifierr(CategoryProduct t, int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

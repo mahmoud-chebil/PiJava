@@ -39,7 +39,7 @@ public class DataSource {
             ResultSet rs = ps.executeQuery();
             
             while (rs.next()){   
-                list1.add(new Cart(rs.getInt("id") ,rs.getInt("quantity"),rs.getInt("produit_id")));               
+                list1.add(new Cart( rs.getString("name"),rs.getInt("quantity"),rs.getString("price"),rs.getInt("id")));               
             }
         } catch (Exception e) {
         }

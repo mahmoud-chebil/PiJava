@@ -100,8 +100,8 @@ public class GestionProductsFXMLController implements Initializable {
             Logger.getLogger(GestionProductsFXMLController.class.getName()).log(Level.SEVERE, null, ex);
         }           
             idg.setCellValueFactory(new PropertyValueFactory<Product,Integer>("id"));
-            nomg.setCellValueFactory(new PropertyValueFactory<Product,String>("name"));
-             prixg.setCellValueFactory(new PropertyValueFactory<Product,String>("price"));
+            nomg.setCellValueFactory(new PropertyValueFactory<Product,String>("nom"));
+             prixg.setCellValueFactory(new PropertyValueFactory<Product,String>("prix"));
             descg.setCellValueFactory(new PropertyValueFactory<Product,String>("descreption"));   
            
             

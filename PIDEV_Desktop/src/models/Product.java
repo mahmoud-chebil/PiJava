@@ -1,6 +1,10 @@
 package models;
 
+import static models.Cart.instance;
+
 public class Product {
+
+   
 
 	private int id;
 	private String name;
@@ -9,10 +13,23 @@ public class Product {
 	private int category_id;
         private String categorie;
         private String fileName;
+   public static Product instance;
 
+    public Product() {
+    }
+     public String valueOf(String pname) {
+        return this.name;
+    }
     public Product(String name, String price) {
         this.name = name;
         this.price = price;
+    }
+    
+     public static Product getInstance() {
+        if (instance == null) {
+            instance = new Product();
+        }
+        return instance;
     }
 
     public Product(int id, String name, String price, String description) {
@@ -27,10 +44,13 @@ public class Product {
         this.price = price;
         this.description = description;
     }
-	
-        
-        
-        
+
+    public Product(int id, String name, String price) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+    }
+       
         
 	public int getId() {
 		return id;

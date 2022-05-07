@@ -27,10 +27,10 @@ public class ServiceCartt implements IServiceCart<Cart>{
     @Override
     public void ajouter(Cart t) {
           try {
-            String requete = "INSERT INTO cart (produit_id ,name) VALUES (?,?)";
+            String requete = "INSERT INTO cart (name,price) VALUES (?,?)";
             PreparedStatement pst = cnx.prepareStatement(requete);
-          pst.setInt(1, t.getProduit_id());
-            pst.setString(2, t.getName());
+          pst.setString(1, t.getName());
+            pst.setString(2, t.getPrice());
             pst.executeUpdate();
             System.out.println("Produit Ajoutée a la Cart !");
             
@@ -38,7 +38,21 @@ public class ServiceCartt implements IServiceCart<Cart>{
             System.err.println(ex.getMessage());
         }
     }
-
+    
+    @Override
+    public void ajouterpr(Cart t) {
+          try {
+            String requete = "INSERT INTO cart (produits) VALUES (?)";
+            PreparedStatement pst = cnx.prepareStatement(requete);
+          pst.setString(1, t.getProduits());
+          
+            pst.executeUpdate();
+            System.out.println("Produits Ajoutée a la Cart !");
+            
+        } catch(SQLException ex) {
+            System.err.println(ex.getMessage());
+        }
+    }
 
         public int deleteCart(int id) throws SQLException {
         int i = 0;
@@ -73,7 +87,7 @@ public int deleteCartf() throws SQLException {
             Statement pst = cnx.prepareStatement(requete);
             ResultSet rs = pst.executeQuery(requete);
             while (rs.next()) {
-                list.add(new Cart(rs.getInt(1),rs.getInt(3),rs.getString(4))); 
+                list.add(new Cart(rs.getString(5),rs.getInt(2),rs.getString("price"),rs.getInt(1))); 
             }
             
         } catch(SQLException ex) {
@@ -110,7 +124,12 @@ public int deleteCartf() throws SQLException {
         }
     }
 
-   
+   public void totale(int id) throws SQLException {
+       String requete = "SELECT * FROM cart WHERE id=?";
+        PreparedStatement pst = cnx.prepareStatement(requete);
+        pst.setInt(1, id);
+        pst.executeUpdate();
+   }
  
 
     }
