@@ -1,0 +1,109 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17 avr. 2022, 00:09:17
+    Author     : MSI
+*/
+
+
+.mainsideFxmlClass {
+    -fx-background-color: #417D7A;
+}
+.maintopFxmlClass {
+    -fx-background-color: #EDE6DB;
+}
+.mainFxmlClass {
+    -fx-background-color: #EDE6DB;
+}
+    .button{
+           -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0,0 0 6 0,0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%,#a34313 0%,#903b12 100%),
+             #9d4024,
+             #d86e3a,
+            radial-gradient(center 50% 50%, radius 100%,#d96e3a,#c54e2c);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75),4,0,0,1);
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+    -fx-text-fill: white;
+       
+        
+    }
+    .button:hover{
+         -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%,#a34313 0%,#903b12 100),
+            #9d4024,
+            #d86e3a,
+            radial-gradient(center 50% 50%,radius 100%,#ea7f4b,#c54e2c);
+    }
+    .button.pressed{
+        -fx-padding: 10 15 13 15;
+     -fx-background-insets: 2 0 0 0,2 0 3 0,2 0 4 0,2 0 5 0;
+    }
+    .button.focused{
+        -fx-background-color:#141414;
+        -fx-border-color:#CDD1D6;
+        -fx-border-width:0px 0px 0px 3px;
+        
+        
+    }
+    .sale
+{
+    -fx-padding: 8 15 15 15;
+    -fx-background-insets: 0,0 0 5 0,0 0 6 0,0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%,#4AA3A2 0%,#4AA3A2 100%),
+             #62B9CB,
+             #62B9CB,
+            radial-gradient(center 50% 50%, radius 100%,#4AA3A2,#4AA3A2);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75),4,0,0,1);
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+    -fx-text-fill: white;
+}
+
+.sale:hover
+{
+
+    -fx-background-color:
+            linear-gradient(from 0% 93% to 0% 100%,#226D68 0%,#226D68 100),
+            #A7E0E0,
+            #A7E0E0,
+            radial-gradient(center 50% 50%,radius 100%,#226D68,#226D68);
+}
+
+.sale:pressed
+{
+     -fx-padding: 10 15 13 15;
+     -fx-background-insets: 2 0 0 0,2 0 3 0,2 0 4 0,2 0 5 0;
+
+}
+
+.label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
+}
+.line{
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+  -fx-background-color: linear-gradient(#417D7A, #EDE6DB);
+   -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.line:hover{     
+  -fx-background-color: linear-gradient(#EDE6DB, #417D7A);
+  -fx-text-fill:white;
+  -fx-font-weight:bold; 
+ 
+}
+
+

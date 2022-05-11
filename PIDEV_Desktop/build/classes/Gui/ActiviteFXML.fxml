@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="btn_stat" prefHeight="577.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.ActiviteFXMLController">
+   <children>
+      <TextField fx:id="tf_nom" layoutX="56.0" layoutY="120.0" promptText="Nom" />
+      <TextField fx:id="tf_type" layoutX="56.0" layoutY="188.0" promptText="Type" />
+      <TextField fx:id="tf_prix" layoutX="56.0" layoutY="263.0" promptText="100" />
+      <Button layoutX="43.0" layoutY="340.0" mnemonicParsing="false" onAction="#AjouterActivite" text="Ajouter" />
+      <Label layoutX="56.0" layoutY="90.0" text="Nom Activite" />
+      <Label layoutX="56.0" layoutY="164.0" text="Type Activite" />
+      <Label layoutX="56.0" layoutY="234.0" text="Prix" />
+      <TableView fx:id="tableAc" layoutX="392.0" layoutY="57.0" onMouseClicked="#OnTableClick" prefHeight="406.0" prefWidth="404.0">
+        <columns>
+          <TableColumn fx:id="idC" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="nomC" prefWidth="107.0" text="Nom" />
+            <TableColumn fx:id="typeC" prefWidth="108.0" text="Type" />
+            <TableColumn fx:id="prixC" prefWidth="113.0" text="Prix" />
+        </columns>
+      </TableView>
+      <Button layoutX="124.0" layoutY="340.0" mnemonicParsing="false" onAction="#ModifierActivite" text="Modifier" />
+      <Button layoutX="486.0" layoutY="483.0" mnemonicParsing="false" onAction="#table" text="Refrecher" />
+      <Button layoutX="212.0" layoutY="340.0" mnemonicParsing="false" onAction="#supprimerActivite" text="Supprimer" />
+      <Button layoutX="644.0" layoutY="482.0" mnemonicParsing="false" onAction="#Stats" prefHeight="31.0" prefWidth="87.0" text="Stats" />
+   </children>
+</AnchorPane>

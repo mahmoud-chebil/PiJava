@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="containerPanier" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.panier.PanierController">
+   <children>
+      <Label  layoutX="273.0" layoutY="30.0" text="Panier">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <TableView fx:id="listePanier" layoutX="42.0" layoutY="76.0" prefHeight="200.0" prefWidth="495.0">
+        <columns>
+          <TableColumn fx:id="nomProduits" prefWidth="176.0" text="Nom produits" />
+          <TableColumn fx:id="quantiteProduit" prefWidth="131.0" text="Quantite" />
+            <TableColumn fx:id="incQt" prefWidth="68.0" text="Plus" />
+            <TableColumn fx:id="decQt" prefWidth="43.0" text="Moins" />
+            <TableColumn fx:id="supprimerProduits" prefWidth="76.0" text="Supprimer" />
+        </columns>
+      </TableView>
+      <Button fx:id="validerCommande" layoutX="249.0" layoutY="283.0" mnemonicParsing="false" onAction="#validerCommande" style="-fx-background-color: #39A67F;" text="Valider la commande" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="451.0" prefWidth="632.0" styleClass="maintopFxmlClass" stylesheets="@../style/stylemain.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.TypeController">
+   <children>
+      <TextField fx:id="description" layoutX="77.0" layoutY="196.0" promptText="description" />
+      <Button fx:id="btnadd" layoutX="34.0" layoutY="273.0" mnemonicParsing="false" onAction="#insertType" styleClass="sale" text="add" />
+      <Button fx:id="btnupdate" disable="true" layoutX="102.0" layoutY="273.0" mnemonicParsing="false" onAction="#updateType" styleClass="sale" text="update" />
+      <Button fx:id="btndelete" disable="true" layoutX="182.0" layoutY="273.0" mnemonicParsing="false" onAction="#deleteType" styleClass="sale" text="delete" />
+      <TableView fx:id="tvtype" layoutX="329.0" layoutY="89.0" onMouseClicked="#Clicked_item" prefHeight="240.0" prefWidth="273.0">
+        <columns>
+          <TableColumn fx:id="colid" prefWidth="104.0" text="id" />
+          <TableColumn fx:id="coldescription" prefWidth="168.0" text="description" />
+        </columns>
+      </TableView>
+      <Button fx:id="back" layoutX="472.0" layoutY="344.0" mnemonicParsing="false" onAction="#backAcceuil" prefHeight="42.0" prefWidth="74.0" styleClass="sale" text="back" />
+      <Label contentDisplay="RIGHT" layoutX="61.0" lineSpacing="15.0" prefHeight="60.0" prefWidth="180.0" text="Type Reclamation" textOverrun="WORD_ELLIPSIS" />
+   </children>
+</AnchorPane>
