@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="850.0" style="-fx-background-color: #F1F7ED;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.product.formController">
+   <children>
+      <Pane layoutX="220.0" layoutY="14.0" prefHeight="573.0" prefWidth="682.0" stylesheets="@../../Style/stylemain.css">
+         <children>
+            <Button layoutX="323.0" layoutY="464.0" mnemonicParsing="false" onAction="#SaveProduct" opacity="0.89" prefHeight="31.0" prefWidth="295.0" text="Enregistrer" textFill="WHITE" />
+            <Label layoutX="25.0" layoutY="211.0" prefHeight="21.0" prefWidth="110.0" text="Description">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="tfDescription" layoutX="108.0" layoutY="197.0" prefHeight="151.0" prefWidth="557.0" />
+            <Label layoutX="25.0" layoutY="121.0" text="Name">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfName" layoutX="74.0" layoutY="114.0" prefHeight="31.0" prefWidth="334.0">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="437.0" layoutY="391.0" text="Prix">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="34.0" layoutY="397.0" mnemonicParsing="false" onAction="#OpenFileMan" prefHeight="31.0" prefWidth="262.0" text="Choisir une image">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="ImagePub" fitHeight="151.0" fitWidth="307.0" layoutX="4.0" layoutY="441.0" pickOnBounds="true" preserveRatio="true" />
+            <TextField fx:id="Imagepath" layoutX="18.0" layoutY="514.0" opacity="0.0" prefHeight="31.0" prefWidth="278.0">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="titreerror" layoutX="22.0" layoutY="166.0" prefHeight="21.0" prefWidth="473.0" text="Le champs titre est obligatoire" textFill="#f80202">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="descriptionerror" layoutX="27.0" layoutY="356.0" prefHeight="21.0" prefWidth="473.0" text="Le champs description est obligatoire" textFill="#f80202">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="imageerror" layoutX="34.0" layoutY="442.0" prefHeight="21.0" prefWidth="473.0" text="Le champs image est obligatoire" textFill="#f80202">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfPrice" layoutX="474.0" layoutY="387.0">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="cbCategory" layoutX="511.0" layoutY="117.0" prefWidth="150.0" />
+            <Label layoutX="444.0" layoutY="121.0" text="Categorie">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="categoryerror" layoutX="444.0" layoutY="166.0" prefHeight="21.0" prefWidth="225.0" text="Le champs categorie est obligatoire" textFill="#f80202">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="priceerror" layoutX="437.0" layoutY="420.0" prefHeight="21.0" prefWidth="272.0" text="Le champs prix est obligatoire" textFill="#f80202">
+               <font>
+                  <Font name="Times New Roman" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" graphicTextGap="7.0" layoutX="33.0" layoutY="20.0" lineSpacing="1.0" prefHeight="47.0" prefWidth="617.0" styleClass="mainFxmlClass" stylesheets="@../../Style/stylemain.css" text="Ajouter Produit" textFill="#393d3f">
+               <font>
+                  <Font name="Times New Roman Bold" size="28.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER_RIGHT" layoutX="489.0" layoutY="14.0" prefHeight="47.0" prefWidth="152.0">
+               <children>
+                  <ImageView fitHeight="37.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/278382927_1140717773171535_2077922958034264854_n.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label style="-fx-font-size: 16; -fx-font: bold;" text="TuniDiscovery">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <VBox alignment="TOP_CENTER" layoutX="6.0" layoutY="-4.0" prefHeight="609.0" prefWidth="198.0">
+         <children>
+            <ImageView fitHeight="135.0" fitWidth="147.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/278667095_522563369335371_2629441377533780861_n.png" />
+               </image>
+            </ImageView>
+            <Button cancelButton="true" defaultButton="true" mnemonicParsing="false" prefHeight="47.0" prefWidth="191.0" styleClass="line" text="Evenement">
+               <VBox.margin>
+                  <Insets bottom="30.0" top="60.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="Commandes" mnemonicParsing="false" onAction="#showCommande" prefHeight="30.0" prefWidth="176.0" style="-fx-border-radius: 10px;" stylesheets="@../../Style/stylemain.css" text="Commandes" textFill="#393d3f">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Button>
+            <AnchorPane prefHeight="24.0" prefWidth="198.0">
+               <children>
+                  <Button fx:id="Products" layoutX="11.0" layoutY="28.0" mnemonicParsing="false" onAction="#showProducts" prefHeight="30.0" prefWidth="176.0" stylesheets="@../../Style/stylemain.css" text="Produit" textFill="#393d3f">
+                     <font>
+                        <Font name="Times New Roman" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="26.0" prefWidth="198.0" />
+            <AnchorPane prefHeight="24.0" prefWidth="198.0">
+               <children>
+                  <Button fx:id="ProductCategories" layoutX="11.0" layoutY="10.0" mnemonicParsing="false" onAction="#showProductCategories" prefHeight="30.0" prefWidth="176.0" style="-fx-border-radius: 10px; -fx-background-radius: 10px; -fx-border-color: #B3001B;" stylesheets="@../../Style/stylemain.css" text="Produit Categories" textFill="#b3001b">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

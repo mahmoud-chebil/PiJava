@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane id="AnchorPane" prefHeight="251.0" prefWidth="285.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CardProduitController">
+    <stylesheets>
+        <URL value="@cardproduit.css" />
+    </stylesheets>
+      <children>
+      <VBox layoutX="94.0" layoutY="113.0" prefHeight="197.0" prefWidth="242.0">
+         <children>
+            <Label fx:id="espace" prefHeight="31.0" prefWidth="356.0" textAlignment="CENTER" textFill="#6b0000">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="titre" prefHeight="57.0" prefWidth="242.0" text="">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <TextFlow fx:id="description" prefHeight="72.0" prefWidth="348.0" />
+            <Label fx:id="type" prefHeight="34.0" prefWidth="356.0" text="" />
+            <Label fx:id="prix" prefHeight="31.0" prefWidth="356.0" textFill="#a40b0b">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Button fx:id="b" mnemonicParsing="false" onAction="#ajout_panier" prefHeight="25.0" prefWidth="386.0" text="ajouter au panier" textFill="WHITE" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
