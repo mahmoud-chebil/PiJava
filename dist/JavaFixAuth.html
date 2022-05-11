@@ -1,0 +1,45 @@
+<html><head>
+  <SCRIPT src="./web-files/dtjava.js"></SCRIPT>
+<script>
+    function launchApplication(jnlpfile) {
+        dtjava.launch(            {
+                url : 'JavaFixAuth.jnlp',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxqbmxwIHNwZWM9IjEuMCIgeG1sbnM6amZ4PSJodHRwOi8vamF2YWZ4LmNvbSIgaHJlZj0iSmF2YUZpeEF1dGguam5scCI+DQogIDxpbmZvcm1hdGlvbj4NCiAgICA8dGl0bGU+SmF2YUZpeEF1dGg8L3RpdGxlPg0KICAgIDx2ZW5kb3I+SGF6ZW08L3ZlbmRvcj4NCiAgICA8ZGVzY3JpcHRpb24+bnVsbDwvZGVzY3JpcHRpb24+DQogICAgPG9mZmxpbmUtYWxsb3dlZC8+DQogIDwvaW5mb3JtYXRpb24+DQogIDxyZXNvdXJjZXM+DQogICAgPGoyc2UgdmVyc2lvbj0iMS42KyIgaHJlZj0iaHR0cDovL2phdmEuc3VuLmNvbS9wcm9kdWN0cy9hdXRvZGwvajJzZSIvPg0KICAgIDxqYXIgaHJlZj0iSmF2YUZpeEF1dGguamFyIiBzaXplPSIxNjc4MzA3NSIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXGNvbW1vbnMtY29kZWMtMS4xNS5qYXIiIHNpemU9IjM1Mzc5MyIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXGphdmF4Lm1haWwuamFyIiBzaXplPSI2NTkwMzMiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlxteXNxbC1jb25uZWN0b3ItamF2YS01LjEuMjMtYmluLmphciIgc2l6ZT0iODM0MTI2IiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcdGVzczRqLTUuMi4wLmphciIgc2l6ZT0iOTA2OTE0NCIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXHR3aWxpby04LjI5LjEtamFyLXdpdGgtZGVwZW5kZW5jaWVzLmphciIgc2l6ZT0iMTA3MDQyODUiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlx0d2lsaW8tamF2YS1zZGstMy40LjIuamFyIiBzaXplPSIxNjM5MjEiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlx0d2lsaW8tamF2YS1zZGstNy4wLjAtcmMtMTAtamFyLXdpdGgtZGVwZW5kZW5jaWVzLmphciIgc2l6ZT0iODcxNTMwMiIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXHR3aWxpby1qYXZhLXNkay03LjAuMC1yYy0xMC5qYXIiIHNpemU9IjExMjMxMzMiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgPC9yZXNvdXJjZXM+DQogIDxhcHBsZXQtZGVzYyAgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2MDAiIG1haW4tY2xhc3M9ImNvbS5qYXZhZngubWFpbi5Ob0phdmFGWEZhbGxiYWNrIiAgbmFtZT0iSmF2YUZpeEF1dGgiID4NCiAgICA8cGFyYW0gbmFtZT0icmVxdWlyZWRGWFZlcnNpb24iIHZhbHVlPSI4LjArIi8+DQogIDwvYXBwbGV0LWRlc2M+DQogIDxqZng6amF2YWZ4LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJqYXZhZml4YXV0aC5KYXZhRml4QXV0aCIgIG5hbWU9IkphdmFGaXhBdXRoIiAvPg0KICA8dXBkYXRlIGNoZWNrPSJhbHdheXMiLz4NCjwvam5scD4NCg=='
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+        return false;
+    }
+</script>
+
+<script>
+    function javafxEmbedjavafixauth() {
+        dtjava.embed(
+            {
+                id : 'javafixauth',
+                url : 'JavaFixAuth.jnlp',
+                placeholder : 'javafx-app-placeholder',
+                width : '800',
+                height : '600',
+                jnlp_content : 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxqbmxwIHNwZWM9IjEuMCIgeG1sbnM6amZ4PSJodHRwOi8vamF2YWZ4LmNvbSIgaHJlZj0iSmF2YUZpeEF1dGguam5scCI+DQogIDxpbmZvcm1hdGlvbj4NCiAgICA8dGl0bGU+SmF2YUZpeEF1dGg8L3RpdGxlPg0KICAgIDx2ZW5kb3I+SGF6ZW08L3ZlbmRvcj4NCiAgICA8ZGVzY3JpcHRpb24+bnVsbDwvZGVzY3JpcHRpb24+DQogICAgPG9mZmxpbmUtYWxsb3dlZC8+DQogIDwvaW5mb3JtYXRpb24+DQogIDxyZXNvdXJjZXM+DQogICAgPGoyc2UgdmVyc2lvbj0iMS42KyIgaHJlZj0iaHR0cDovL2phdmEuc3VuLmNvbS9wcm9kdWN0cy9hdXRvZGwvajJzZSIvPg0KICAgIDxqYXIgaHJlZj0iSmF2YUZpeEF1dGguamFyIiBzaXplPSIxNjc4MzA3NSIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXGNvbW1vbnMtY29kZWMtMS4xNS5qYXIiIHNpemU9IjM1Mzc5MyIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXGphdmF4Lm1haWwuamFyIiBzaXplPSI2NTkwMzMiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlxteXNxbC1jb25uZWN0b3ItamF2YS01LjEuMjMtYmluLmphciIgc2l6ZT0iODM0MTI2IiBkb3dubG9hZD0iZWFnZXIiIC8+DQogICAgPGphciBocmVmPSJsaWJcdGVzczRqLTUuMi4wLmphciIgc2l6ZT0iOTA2OTE0NCIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXHR3aWxpby04LjI5LjEtamFyLXdpdGgtZGVwZW5kZW5jaWVzLmphciIgc2l6ZT0iMTA3MDQyODUiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlx0d2lsaW8tamF2YS1zZGstMy40LjIuamFyIiBzaXplPSIxNjM5MjEiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgICA8amFyIGhyZWY9ImxpYlx0d2lsaW8tamF2YS1zZGstNy4wLjAtcmMtMTAtamFyLXdpdGgtZGVwZW5kZW5jaWVzLmphciIgc2l6ZT0iODcxNTMwMiIgZG93bmxvYWQ9ImVhZ2VyIiAvPg0KICAgIDxqYXIgaHJlZj0ibGliXHR3aWxpby1qYXZhLXNkay03LjAuMC1yYy0xMC5qYXIiIHNpemU9IjExMjMxMzMiIGRvd25sb2FkPSJlYWdlciIgLz4NCiAgPC9yZXNvdXJjZXM+DQogIDxhcHBsZXQtZGVzYyAgd2lkdGg9IjgwMCIgaGVpZ2h0PSI2MDAiIG1haW4tY2xhc3M9ImNvbS5qYXZhZngubWFpbi5Ob0phdmFGWEZhbGxiYWNrIiAgbmFtZT0iSmF2YUZpeEF1dGgiID4NCiAgICA8cGFyYW0gbmFtZT0icmVxdWlyZWRGWFZlcnNpb24iIHZhbHVlPSI4LjArIi8+DQogIDwvYXBwbGV0LWRlc2M+DQogIDxqZng6amF2YWZ4LWRlc2MgIHdpZHRoPSI4MDAiIGhlaWdodD0iNjAwIiBtYWluLWNsYXNzPSJqYXZhZml4YXV0aC5KYXZhRml4QXV0aCIgIG5hbWU9IkphdmFGaXhBdXRoIiAvPg0KICA8dXBkYXRlIGNoZWNrPSJhbHdheXMiLz4NCjwvam5scD4NCg=='
+            },
+            {
+                javafx : '8.0+'
+            },
+            {}
+        );
+    }
+    <!-- Embed FX application into web page once page is loaded -->
+    dtjava.addOnloadCallback(javafxEmbedjavafixauth);
+</script>
+
+</head><body>
+<h2>Test page for <b>JavaFixAuth</b></h2>
+  <b>Webstart:</b> <a href='JavaFixAuth.jnlp' onclick="return launchApplication('JavaFixAuth.jnlp');">click to launch this app as webstart</a><br><hr><br>
+
+  <!-- Applet will be inserted here -->
+  <div id='javafx-app-placeholder'></div>
+</body></html>

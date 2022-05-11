@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="JavaFixAuth.jnlp">
+  <information>
+    <title>JavaFixAuth</title>
+    <vendor>Hazem</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="JavaFixAuth.jar" size="16783075" download="eager" />
+    <jar href="lib\commons-codec-1.15.jar" size="353793" download="eager" />
+    <jar href="lib\javax.mail.jar" size="659033" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\tess4j-5.2.0.jar" size="9069144" download="eager" />
+    <jar href="lib\twilio-8.29.1-jar-with-dependencies.jar" size="10704285" download="eager" />
+    <jar href="lib\twilio-java-sdk-3.4.2.jar" size="163921" download="eager" />
+    <jar href="lib\twilio-java-sdk-7.0.0-rc-10-jar-with-dependencies.jar" size="8715302" download="eager" />
+    <jar href="lib\twilio-java-sdk-7.0.0-rc-10.jar" size="1123133" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="JavaFixAuth" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="javafixauth.JavaFixAuth"  name="JavaFixAuth" />
+  <update check="always"/>
+</jnlp>
