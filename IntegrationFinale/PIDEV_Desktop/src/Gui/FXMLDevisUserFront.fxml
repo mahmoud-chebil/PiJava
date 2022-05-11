@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="scene" onMouseEntered="#reserver" prefHeight="646.0" prefWidth="487.0" stylesheets="@../style/stylemain.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gui.FXMLDevisUserFrontController">
+   <children>
+      <ImageView fx:id="flecheprec" fitHeight="37.0" fitWidth="47.0" layoutX="36.0" layoutY="2.0" onMouseClicked="#precedent" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/278376076_764523861179263_4766309386191578156_n.png" />
+         </image>
+      </ImageView>
+      <VBox alignment="TOP_CENTER" layoutX="-4.0" layoutY="1.0" prefHeight="689.0" prefWidth="37.0" styleClass="mainsideFxmlClass" />
+      <Label fx:id="idres" layoutX="128.0" layoutY="191.0" prefHeight="30.0" prefWidth="57.0" />
+      <Label layoutX="54.0" layoutY="71.0" text="Au nom de :" />
+      <Label fx:id="user" layoutX="178.0" layoutY="71.0" prefHeight="30.0" prefWidth="180.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Label>
+      <Label layoutX="52.0" layoutY="101.0" text="Email:" />
+      <Label fx:id="email" layoutX="142.0" layoutY="101.0" prefHeight="30.0" prefWidth="274.0" />
+      <Label layoutX="37.0" layoutY="191.0" stylesheets="@../style/stylemain.css" text="Devis N°:" />
+      <Label layoutX="43.0" layoutY="252.0" styleClass="label2" text="Date de réservation:" />
+      <Label layoutX="46.0" layoutY="290.0" styleClass="label2" text="Evènement:" />
+      <Label layoutX="47.0" layoutY="328.0" styleClass="label2" text="Date de début:" />
+      <Label layoutX="47.0" layoutY="368.0" styleClass="label2" text="Date de fin:" />
+      <Label fx:id="dateres" layoutX="201.0" layoutY="252.0" prefHeight="25.0" prefWidth="238.0" styleClass="label2" />
+      <Label fx:id="descevent" layoutX="139.0" layoutY="288.0" prefHeight="25.0" prefWidth="218.0" styleClass="label2" />
+      <Label fx:id="datedeb" layoutX="164.0" layoutY="327.0" prefHeight="25.0" prefWidth="246.0" styleClass="label2" />
+      <Label fx:id="datefin" layoutX="140.0" layoutY="368.0" prefHeight="25.0" prefWidth="232.0" styleClass="label2" />
+      <Label layoutX="33.0" layoutY="450.0" styleClass="label2" text="Nombre de personnes" />
+      <Label layoutX="222.0" layoutY="450.0" styleClass="label2" text="PU" />
+      <Label layoutX="377.0" layoutY="450.0" styleClass="label2" text="Total à payer" />
+      <Label fx:id="nbpers" layoutX="67.0" layoutY="499.0" prefHeight="30.0" prefWidth="72.0" styleClass="label2" />
+      <Label fx:id="pu" layoutX="197.0" layoutY="502.0" prefHeight="25.0" prefWidth="72.0" styleClass="label2" />
+      <Label fx:id="total" layoutX="390.0" layoutY="499.0" prefHeight="30.0" prefWidth="72.0" styleClass="label2" />
+      <ImageView fitHeight="5.0" fitWidth="274.0" layoutX="31.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/trait.JPG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="9.0" fitWidth="454.0" layoutX="33.0" layoutY="432.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/trait.JPG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="8.0" fitWidth="464.0" layoutX="33.0" layoutY="476.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/trait.JPG" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imprimer" fitHeight="88.0" fitWidth="64.0" layoutX="61.0" layoutY="601.0" onMouseClicked="#imprimerDevis" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/imprimer.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="37.0" fitWidth="59.0" layoutX="320.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/278382927_1140717773171535_2077922958034264854_n.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="357.0" layoutY="20.0" style="-fx-font-size: 16; -fx-font: bold;" text="TuniDiscovery" />
+      <ImageView fx:id="pdf" fitHeight="48.0" fitWidth="50.0" layoutX="415.0" layoutY="609.0" onMouseClicked="#fnpdf" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/pdf.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="288.0" layoutY="450.0" styleClass="label2" text="Remise" />
+      <Label fx:id="remis" layoutX="297.0" layoutY="502.0" prefHeight="25.0" prefWidth="37.0" styleClass="label2" />
+      <Label layoutX="335.0" layoutY="504.0" styleClass="label2" text="\%" />
+      <Label layoutX="461.0" layoutY="504.0" styleClass="label2" text="DT" />
+   </children>
+</AnchorPane>
